@@ -10,5 +10,5 @@ def write_file(filename="", text=""):
         Returns:
             number refer to character written.
     """
-    with open(filename, "w") as myfile:
+    with open(filename, "w", encoding = "utf-8") as myfile:
         return (myfile.write(text))
