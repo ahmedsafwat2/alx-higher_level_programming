@@ -9,7 +9,8 @@ module with class Rectangle
 
 
 class Rectangle(BaseGeometry):
-    """Rectangle class that inherits from BaseGeometry"""
+    """Represent a rectangle using BaseGeometry."""
+
     def __init__(self, width, height):
         """Intialize a new Rectangle.
 
