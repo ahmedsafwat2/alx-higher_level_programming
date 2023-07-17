@@ -19,7 +19,7 @@ class Rectangle(Base):
             TypeError: If either of x or y is not an int.
             ValueError: If either of x or y < 0.
         """
-    self.value_validattion("width", width)
+    self.value_validation("width", width)
     self.__width = width
     self.value_validation("height", height)
     self.__height = height
@@ -28,3 +28,4 @@ class Rectangle(Base):
     self.x_y_validation("y", y)
     self.__y = y
     super().__init__(id)
+
