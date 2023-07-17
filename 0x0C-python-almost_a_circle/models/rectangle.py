@@ -78,15 +78,24 @@ class Rectangle(Base):
         if self.__width == 0 or self.__height == 0:
             print("")
             return
-        mtlist = []
-        for i in range(self.__x):
-            mylist.append("$")
+        mylist = []
+        for i in range(self.__y):
             mylist.append("\n")
         for i in range(self.__height):
-            for j in range(self.__y):
+            for j in range(self.__x):
                 mylist.append(" ")
             for h in range(self.__width):
                 mylist.append("#")
-            mylist.append("$")
             mylist.append("\n")
         print("".join(mylist), end="")
+
+    def __str__(self):
+        """Return the print() and str() representation of the Rectangle."""
+        mystr = ""
+        mystr = "[Rectangle] (" + str(self.id) + ") "
+        mystr += str(self.__x) + "/" + str(self.__y)
+        mystr += " - " + str(self.__width) + "/" + str(self.__height)
+        return mystr
+
+
+
