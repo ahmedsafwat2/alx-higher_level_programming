@@ -68,3 +68,25 @@ class Rectangle(Base):
     def y(self, value):
         self.x_y_validation("y", value)
         self.__y = value
+
+    def area(self):
+        """Return the area of the Rectangle."""
+        return self.__width * self.__height
+
+    def display(self):
+        """Print the Rectangle using the `#` character."""
+        if self.__width == 0 or self.__height == 0:
+            print("")
+            return
+        mtlist = []
+        for i in range(self.__x):
+            mylist.append("$")
+            mylist.append("\n")
+        for i in range(self.__height):
+            for j in range(self.__y):
+                mylist.append(" ")
+            for h in range(self.__width):
+                mylist.append("#")
+            mylist.append("$")
+            mylist.append("\n")
+        print("".join(mylist), end="")
