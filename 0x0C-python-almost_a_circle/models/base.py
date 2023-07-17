@@ -23,9 +23,9 @@ class Base:
             self.id = Base.__nb_objects
 
     def value_validation(self, name, value):
-         """Validate a parameter as an integer.
+        """Validate a parameter as an integer.
 
-        Args:
+            Args:
             name (str): The name of the parameter.
             value (int): The parameter to validate.
         Raises:
@@ -38,9 +38,9 @@ class Base:
             raise ValueError(f"{name} must be > 0")
 
     def x_y_validation(self, name, value):
-         """Validate a parameter as an integer.
+        """Validate a parameter as an integer.
 
-        Args:
+            Args:
             name (str): The name of the parameter.
             value (int): The parameter to validate.
         Raises:
