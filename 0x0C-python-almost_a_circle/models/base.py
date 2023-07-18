@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Define a base module class"""
+import json
 
 
 class Base:
@@ -51,3 +52,14 @@ class Base:
             raise TypeError(f"{name} must be an integer")
         if value < 0:
             raise ValueError(f"{name} must be >= 0")
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Return the JSON serialization of a list of dicts.
+
+        Args:
+            list_dictionaries (list): A list of dictionaries.
+        """
+        if list_dictionaries == []:
+            return "[]"
+        return json.dumps(list_dictionaries)
+
