@@ -76,7 +76,8 @@ class Base:
             if list_objs is None:
                 f.write("[]")
             else:
-                json.dump(list_objs, f)
+                list_objs = json.dumps(list_objs)
+                f.write(Base.to_json_string(list_objs))
 
     @staticmethod
     def from_json_string(json_string):
