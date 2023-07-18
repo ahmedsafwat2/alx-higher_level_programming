@@ -76,7 +76,7 @@ class Base:
             if list_objs is None:
                 f.write("[]")
             else:
-                list_dicts = [o.to_dictionary() for o in list_objs]
+                list_dicts = json.dump(list_dicts, f)
                 f.write(Base.to_json_string(list_objs))
 
     @staticmethod
