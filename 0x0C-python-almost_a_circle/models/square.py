@@ -27,14 +27,6 @@ class Square(Rectangle):
         self.__width = value
         self.__height = value
 
-    def __str__(self):
-        """Return the print() and str() representation of the Rectangle."""
-        mystr = ""
-        mystr = "[Square] (" + str(self.id) + ") "
-        mystr += str(self.x) + "/" + str(self.y)
-        mystr += " - " + str(self.size)
-        return mystr
-
     def update(self, *args, **kwargs):
         """Update the Square.
         Args:
@@ -74,3 +66,11 @@ class Square(Rectangle):
             "x": self.x,
             "y": self.y
         }
+
+    def __str__(self):
+        """Return the print() and str() representation of the Rectangle."""
+        mystr = ""
+        mystr = "[Square] (" + str(self.id) + ") "
+        mystr += str(self.x) + "/" + str(self.y)
+        mystr += " - " + str(self.size)
+        return mystr
