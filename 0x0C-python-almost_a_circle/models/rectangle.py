@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Define a Rectangle class."""
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -71,20 +71,20 @@ class Rectangle(Base):
 
     def area(self):
         """Return the area of the Rectangle."""
-        return self.__width * self.__height
+        return self.width * self.height
 
     def display(self):
         """Print the Rectangle using the `#` character."""
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             print("")
             return
         mylist = []
-        for i in range(self.__y):
+        for i in range(self.y):
             mylist.append("\n")
-        for i in range(self.__height):
-            for j in range(self.__x):
+        for i in range(self.height):
+            for j in range(self.x):
                 mylist.append(" ")
-            for h in range(self.__width):
+            for h in range(self.width):
                 mylist.append("#")
             mylist.append("\n")
         print("".join(mylist), end="")
@@ -93,6 +93,6 @@ class Rectangle(Base):
         """Return the print() and str() representation of the Rectangle."""
         mystr = ""
         mystr = "[Rectangle] (" + str(self.id) + ") "
-        mystr += str(self.__x) + "/" + str(self.__y)
-        mystr += " - " + str(self.__width) + "/" + str(self.__height)
+        mystr += str(self.x) + "/" + str(self.y)
+        mystr += " - " + str(self.width) + "/" + str(self.height)
         return mystr
