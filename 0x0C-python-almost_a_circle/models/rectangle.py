@@ -96,6 +96,3 @@ class Rectangle(Base):
         mystr += str(self.__x) + "/" + str(self.__y)
         mystr += " - " + str(self.__width) + "/" + str(self.__height)
         return mystr
-
-
-
